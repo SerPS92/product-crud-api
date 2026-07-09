@@ -52,8 +52,8 @@ public interface ProductApi {
 			content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
 	})
 	ResponseEntity<PageResponseDto<ProductResponseDto>> getProducts(
-		@RequestParam(defaultValue = "0") @Min(0) int page,
-		@RequestParam(defaultValue = "20") @Min(1) int size
+		@RequestParam(defaultValue = "0") @Min(value = 0, message = "Page must be zero or greater") int page,
+		@RequestParam(defaultValue = "20") @Min(value = 1, message = "Size must be at least one") int size
 	);
 
 	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
