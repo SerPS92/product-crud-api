@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: product-crud-mysql
+    environment:
+      MYSQL_DATABASE: product_crud_db
+      MYSQL_USER: product_user
+      MYSQL_PASSWORD: product_password
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - product_crud_mysql_data:/var/lib/mysql
+
+volumes:
+  product_crud_mysql_data:
