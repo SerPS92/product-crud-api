@@ -16,6 +16,35 @@ REST API for managing a product catalog, built as a technical test with Java 17,
 - Docker Compose
 - Springdoc OpenAPI
 
+## Project structure
+
+```text
+src/main/java/com/example/product_crud_api
+├── api
+│   ├── ProductApi.java
+│   ├── controller
+│   └── dto
+├── application
+│   ├── mapper
+│   └── service
+├── domain
+│   └── entity
+├── infrastructure
+│   ├── config
+│   └── persistence
+└── shared
+    ├── dto
+    └── exception
+```
+
+The project uses a simple layered structure:
+
+* `api`: REST contract, controllers and API DTOs.
+* `application`: service layer and mapping logic.
+* `domain`: JPA entities.
+* `infrastructure`: persistence and configuration.
+* `shared`: common DTOs and exception handling.
+
 ## Requirements
 
 - Java 17
