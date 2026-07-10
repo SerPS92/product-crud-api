@@ -20,21 +20,21 @@ REST API for managing a product catalog, built as a technical test with Java 17,
 
 ```text
 src/main/java/com/example/product_crud_api
-├── api
-│   ├── ProductApi.java
-│   ├── controller
-│   └── dto
-├── application
-│   ├── mapper
-│   └── service
-├── domain
-│   └── entity
-├── infrastructure
-│   ├── config
-│   └── persistence
-└── shared
-    ├── dto
-    └── exception
+|-- api
+|   |-- ProductApi.java
+|   |-- controller
+|   `-- dto
+|-- application
+|   |-- mapper
+|   `-- service
+|-- domain
+|   `-- entity
+|-- infrastructure
+|   |-- config
+|   `-- persistence
+`-- shared
+    |-- dto
+    `-- exception
 ```
 
 The project uses a simple layered structure:
@@ -93,7 +93,7 @@ http://localhost:8080
 - User: `product_user`
 - Password: `product_password`
 - Port: `3306`
-- Flyway automatically runs migrations from `src/main/resources/db/migration`.
+- Flyway automatically runs migrations from `src/main/resources/db/migration` when the application starts.
 - Hibernate uses `ddl-auto: validate`, so tables are not created or updated by Hibernate.
 
 To reset the database from scratch:
